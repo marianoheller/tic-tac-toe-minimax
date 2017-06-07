@@ -1,5 +1,8 @@
 # Tic-Tac-Toe Minimax AI Module
 
+[![Coverage Status](https://coveralls.io/repos/github/marianoheller/tic-tac-toe-minimax/badge.svg?branch=master)](https://coveralls.io/github/marianoheller/tic-tac-toe-minimax?branch=master)
+
+
 Module that given a tic-tac-toe board determines the AI's move and/or returns next state board based on the given board. It has three level of AI's difficulty.
 
 | Difficulty        | Description           |
