@@ -1,0 +1,29 @@
+{
+  "name": "tic-tac-toe-minimax",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe Minimax",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register tests/test*.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianoheller/tic-tac-toe-minimax.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "minimax"
+  ],
+  "author": "Mariano Heller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianoheller/tic-tac-toe-minimax/issues"
+  },
+  "homepage": "https://github.com/marianoheller/tic-tac-toe-minimax#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.0.2"
+  }
+}
