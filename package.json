@@ -4,7 +4,7 @@
   "description": "Tic Tac Toe Minimax",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register tests/test*.js -w"
+    "test": "mocha --compilers js:babel-core/register tests/test*.js"
   },
   "repository": {
     "type": "git",
