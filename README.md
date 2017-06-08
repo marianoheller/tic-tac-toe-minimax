@@ -1,5 +1,6 @@
 # Tic-Tac-Toe Minimax AI Module
 
+[![Build Status](https://travis-ci.org/marianoheller/tic-tac-toe-minimax.svg?branch=master)](https://travis-ci.org/marianoheller/tic-tac-toe-minimax)
 [![Coverage Status](https://coveralls.io/repos/github/marianoheller/tic-tac-toe-minimax/badge.svg?branch=master)](https://coveralls.io/github/marianoheller/tic-tac-toe-minimax?branch=master)
 
 
