@@ -4,7 +4,8 @@
   "description": "Tic Tac Toe Minimax",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register tests/test*.js"
+    "test": "mocha --compilers js:babel-core/register tests/test*.js",
+    "test-w": "mocha --compilers js:babel-core/register tests/test*.js -w"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^4.0.2",
+    "coveralls": "^2.13.1",
     "mocha": "^3.4.2"
   }
 }
