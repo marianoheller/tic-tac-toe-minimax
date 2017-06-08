@@ -80,6 +80,5 @@ returns {
 ```
 ### TODO
 
-* If you pass as argument a board already won by the AI with no empty spaces, the module is going to compute a tie. Make it so it return the actual winner of the board
-* Better testing of GameStep module
+...
 
