@@ -1,6 +1,6 @@
 {
   "name": "tic-tac-toe-minimax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tic Tac Toe Minimax",
   "main": "index.js",
   "scripts": {
