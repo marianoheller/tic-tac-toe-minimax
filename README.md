@@ -5,6 +5,7 @@
 
 
 Module that given a tic-tac-toe board determines the AI's move and/or returns next state board based on the given board. It has three level of AI's difficulty.
+*Note: Only tested on a 3x3 board*
 
 | Difficulty        | Description           |
 |:-------------:|:-------------:| 
@@ -12,9 +13,9 @@ Module that given a tic-tac-toe board determines the AI's move and/or returns ne
 | Hard | AI's move is decided through the minimax algorithm      |
 | Normal      | AI's move has 50/50 chance to be a "Hard difficulty" move or a "Easy difficulty" move       | 
 
-*Note: Only tested on a 3x3 board*
 
 ## Modules
+**
 
 ### ComputerMove
 
@@ -32,6 +33,9 @@ This module computes the best move to be made by the computer.
 
 *Example:*
 ```javascript
+import Minimax from 'tic-tac-toe-minimax'
+const { ComputerMove } = Minimax;
+
 const huPlayer = "X";
 const aiPlayer = "O";
 const symbols = {
@@ -61,6 +65,9 @@ If the game is finished (by winning or tie), the board resets to an empty board.
 
 *Example:*
 ```javascript
+import Minimax from 'tic-tac-toe-minimax'
+const { GameStep } = Minimax;
+
 const huPlayer = "X";
 const aiPlayer = "O";
 const symbols = {
