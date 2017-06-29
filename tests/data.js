@@ -64,6 +64,8 @@ export const bestMoveAssertionData = [
 
 
 export const gameStateAssertionData = [
+
+    //General random moves
     {
         inputBoard: [0,1,2,3,4,5,6,7,8],
         outputMove: {
@@ -92,19 +94,43 @@ export const gameStateAssertionData = [
             winner: null
         }
     },
-    //Board full & tie
+    //Winner move already made by the AI
+    {
+        inputBoard: [aiPlayer,aiPlayer,aiPlayer,3,4,5,6,7,8],
+        outputMove: {
+            board: [aiPlayer,aiPlayer,aiPlayer,3,4,5,6,7,8],
+            winner: "aiPlayer"
+        }
+    },
+    //Winner move already made by the player
+    {
+        inputBoard: [huPlayer,huPlayer,huPlayer,3,4,5,6,7,8],
+        outputMove: {
+            board: [huPlayer,huPlayer,huPlayer,3,4,5,6,7,8],
+            winner: "huPlayer"
+        }
+    },
+    //Last move & draw
+    {
+        inputBoard: [aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,aiPlayer,aiPlayer,huPlayer,8],
+        outputMove: {
+            board: [aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,aiPlayer,aiPlayer,huPlayer,aiPlayer],
+            winner: "draw"
+        }
+    },
+    //Board full & draw
     {
         inputBoard: [aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,aiPlayer,aiPlayer,huPlayer,huPlayer],
         outputMove: {
-            board: [0,1,2,3,4,5,6,7,8],
-            winner: null
+            board: [aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,aiPlayer,aiPlayer,huPlayer,huPlayer],
+            winner: "draw"
         }
     },
     //Board full & AI won
     {
         inputBoard: [aiPlayer,aiPlayer,aiPlayer,huPlayer,aiPlayer,huPlayer,aiPlayer,huPlayer,aiPlayer],
         outputMove: {
-            board: [0,1,2,3,4,5,6,7,8],
+            board: [aiPlayer,aiPlayer,aiPlayer,huPlayer,aiPlayer,huPlayer,aiPlayer,huPlayer,aiPlayer],
             winner: "aiPlayer"
         }
     },
@@ -112,7 +138,7 @@ export const gameStateAssertionData = [
     {
         inputBoard: [huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer],
         outputMove: {
-            board: [0,1,2,3,4,5,6,7,8],
+            board: [huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer,huPlayer],
             winner: "huPlayer"
         }
     },

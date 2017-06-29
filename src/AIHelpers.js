@@ -30,11 +30,23 @@ export default class AIHelpers {
 		return false;
 	}
 	
+	/**
+	 * Gets an Array of empty indexes
+	 * @param {Array} board 
+	 * @param {Object} symbols 
+	 * @return {Array}
+	 */
 	static getEmptyIndexies(board, symbols)   {
 		const { huPlayer, aiPlayer } = symbols;
 		return  board.filter(s => s !== huPlayer && s !== aiPlayer);
 	}
 	
+	/**
+	 * Checks if the are empty squares. Returns true|false.
+	 * @param {Array} board 
+	 * @param {Object} symbols 
+	 * @return {bool}
+	 */
 	static isMovesLeft(board, symbols) {
 		return this.getEmptyIndexies(board, symbols).length !== 0;
 	}

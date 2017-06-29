@@ -13,9 +13,10 @@ Module that given a tic-tac-toe board determines the AI's move and/or returns ne
 | Hard | AI's move is decided through the minimax algorithm      |
 | Normal      | AI's move has 50/50 chance to be a "Hard difficulty" move or a "Easy difficulty" move       | 
 
+##### [DEMO](http://marianoheller.github.io/tic-tac-toe)
 
 ## Modules
-**
+
 
 ### ComputerMove
 
@@ -50,13 +51,15 @@ const nextMove = ComputerMove( board, symbols, difficulty );        //returns 3
 
 ### GameStep
 
-This module wraps the ComputerMove module. It basically computes the next board of a game.
+This module wraps the ComputerMove module and calculates the "next" board.
+If a final game condition in reached it will be informed through the winner property.
+Also, if a final condition is met the board will remain the same.
 
 ```javascript
 const gameState = GameStep(board, symbols, difficulty);      //returns an Object
 /*
 returns {
-    winner: ("huPlayer" | "aiPlayer" | null),
+    winner: ("huPlayer" | "aiPlayer" | "draw" | null),
     board: Array
 }
 */

@@ -15,9 +15,12 @@ export default function GameStep(board, symbols, difficulty) {
 		
 		const bestMove = ComputerMove(board, symbols, difficulty);
 
-		if ( bestMove === undefined ) {   return (new Array(9)).fill(0).map( (e,i) => i);   }
+		//Old version resetted the board if there was an end game result (bestMove===undefined)
+		//if ( bestMove === undefined ) {   return (new Array(9)).fill(0).map( (e,i) => i);   }
 		const newBoard = Array.from(board);
-		newBoard[bestMove] = symbols.aiPlayer;
+		if ( bestMove !== undefined ) {
+			newBoard[bestMove] = symbols.aiPlayer;
+		}
 		
 		return newBoard;	
 	}
@@ -37,20 +40,21 @@ export default function GameStep(board, symbols, difficulty) {
 				return "aiPlayer";
 			}
 			else {
-				return null;
+				return "draw";
 			}
 		} )();
-		const newBoard = (new Array(9)).fill(0).map( (e,i) => i);
 		
-		gameState.board = newBoard;
+		//Old version resetted the board if there was an end game result (bestMove===undefined)
+		// const newBoard = (new Array(9)).fill(0).map( (e,i) => i);
+		
+		gameState.board = board;
 		gameState.winner = winner;
 	}
 	//Else move computer
 	else {
 		const boardAIAfter = computeAIAfterBoard(board);
 		if ( AIHelpers.isGameFinished(boardAIAfter, symbols) ) {
-			const winner = AIHelpers.playerWon(boardAIAfter, symbols.aiPlayer ) ? "aiPlayer" : null;
-			//const newBoard = (new Array(9)).fill(0).map( (e,i) => i);
+			const winner = AIHelpers.playerWon(boardAIAfter, symbols.aiPlayer ) ? "aiPlayer" : "draw";
 			
 			gameState.board = boardAIAfter;
 			gameState.winner = winner;
