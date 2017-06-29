@@ -29,13 +29,12 @@ function GameStep(board, symbols, difficulty) {
 
 		var bestMove = (0, _ComputerMove2.default)(board, symbols, difficulty);
 
-		if (bestMove === undefined) {
-			return new Array(9).fill(0).map(function (e, i) {
-				return i;
-			});
-		}
+		//Old version resetted the board if there was an end game result (bestMove===undefined)
+		//if ( bestMove === undefined ) {   return (new Array(9)).fill(0).map( (e,i) => i);   }
 		var newBoard = Array.from(board);
-		newBoard[bestMove] = symbols.aiPlayer;
+		if (bestMove !== undefined) {
+			newBoard[bestMove] = symbols.aiPlayer;
+		}
 
 		return newBoard;
 	}
@@ -53,22 +52,21 @@ function GameStep(board, symbols, difficulty) {
 			} else if (computerWon) {
 				return "aiPlayer";
 			} else {
-				return null;
+				return "draw";
 			}
 		}();
-		var newBoard = new Array(9).fill(0).map(function (e, i) {
-			return i;
-		});
 
-		gameState.board = newBoard;
+		//Old version resetted the board if there was an end game result (bestMove===undefined)
+		// const newBoard = (new Array(9)).fill(0).map( (e,i) => i);
+
+		gameState.board = board;
 		gameState.winner = winner;
 	}
 	//Else move computer
 	else {
 			var boardAIAfter = computeAIAfterBoard(board);
 			if (_AIHelpers2.default.isGameFinished(boardAIAfter, symbols)) {
-				var _winner = _AIHelpers2.default.playerWon(boardAIAfter, symbols.aiPlayer) ? "aiPlayer" : null;
-				//const newBoard = (new Array(9)).fill(0).map( (e,i) => i);
+				var _winner = _AIHelpers2.default.playerWon(boardAIAfter, symbols.aiPlayer) ? "aiPlayer" : "draw";
 
 				gameState.board = boardAIAfter;
 				gameState.winner = _winner;

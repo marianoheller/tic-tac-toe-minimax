@@ -36,6 +36,14 @@ var AIHelpers = function () {
 			}
 			return false;
 		}
+
+		/**
+   * Gets an Array of empty indexes
+   * @param {Array} board 
+   * @param {Object} symbols 
+   * @return {Array}
+   */
+
 	}, {
 		key: "getEmptyIndexies",
 		value: function getEmptyIndexies(board, symbols) {
@@ -46,6 +54,14 @@ var AIHelpers = function () {
 				return s !== huPlayer && s !== aiPlayer;
 			});
 		}
+
+		/**
+   * Checks if the are empty squares. Returns true|false.
+   * @param {Array} board 
+   * @param {Object} symbols 
+   * @return {bool}
+   */
+
 	}, {
 		key: "isMovesLeft",
 		value: function isMovesLeft(board, symbols) {
