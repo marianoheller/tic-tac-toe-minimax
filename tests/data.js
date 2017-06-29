@@ -118,6 +118,14 @@ export const gameStateAssertionData = [
             winner: "draw"
         }
     },
+    //Winner move already made by the AI
+    {
+        inputBoard: [aiPlayer,aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,6,7,8],
+        outputMove: {
+            board: [aiPlayer,aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,6,7,8],
+            winner: "huPlayer"
+        }
+    },
     //Board full & draw
     {
         inputBoard: [aiPlayer,aiPlayer,huPlayer,huPlayer,huPlayer,aiPlayer,aiPlayer,huPlayer,huPlayer],

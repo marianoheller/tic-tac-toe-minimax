@@ -64,7 +64,8 @@ returns {
 }
 */
 ```
-If the game is finished (by winning or tie), the board resets to an empty board.
+If the provided board has both winning conditions (both player and AI won somehow),
+the *winner* will be the player.
 
 *Example:*
 ```javascript
