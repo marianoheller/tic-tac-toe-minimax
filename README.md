@@ -75,8 +75,8 @@ const { GameStep } = Minimax;
 const huPlayer = "X";
 const aiPlayer = "O";
 const symbols = {
-    huPlayer: huPlayer,
-    aiPlayer: aiPlayer
+    huPlayer,
+    aiPlayer
 }
 const difficulty = "Hard";
 const board = [0,1,aiPlayer,3,huPlayer,huPlayer,6,7,8];
